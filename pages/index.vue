@@ -4,7 +4,7 @@
       <div class="banner-section">
         <div class="right-section">
           <div class="mb-4 display-block">
-            <h1 class="heading">WordsMerge.om</h1>
+            <h1 class="heading">Nameible.com</h1>
           </div>
           <div class="mb-4 display-block">
             <div class="mb-2 display-block">
@@ -82,15 +82,46 @@
       </v-row>
     </v-container>
     <div class="featured-section">
-      <p class="option-tag" @click="showOption = !showOption">
+      <!-- <p class="option-tag" @click="showOption = !showOption">
         + Extra Options
-      </p>
+      </p> -->
       <v-btn class="ml-5" color="primary" rounded @click="reset"
         >Reset Field</v-btn
       >
     </div>
-    <div v-show="showOption === true">
+    <div>
       <div class="featured-section mt-3">
+        <v-container fluid>
+          <v-row align="center">
+            <v-col class="d-flex" cols="12" sm="6" md="4">
+              <v-select
+                :items="items"
+                label="Select Prefixes, Suffixes etc"
+                outlined
+                v-model="selectOption"
+              ></v-select>
+            </v-col>
+            <v-col class="d-flex" cols="12" sm="6" md="4">
+              <v-select
+                :items="fields"
+                label="Select Fields"
+                outlined
+                v-model="selectField"
+                v-show="selectOption"
+              ></v-select>
+            </v-col>
+            <v-col class="d-flex" cols="12" sm="6" md="4">
+              <v-btn
+                class="mb-8"
+                color="primary"
+                @click="add"
+                v-show="selectOption && selectField"
+                rounded
+                >Add</v-btn
+              >
+            </v-col>
+          </v-row>
+        </v-container>
         <div class="featured-section-left">
           <span class="featured-title">Separator:</span>
           <v-btn
@@ -159,7 +190,7 @@
             ></v-text-field
           ></v-btn>
         </div>
-        <div class="">
+        <!-- <div class="">
           <div class="">
             <span class="featured-title">Wrap in:</span>
             <v-btn
@@ -195,39 +226,8 @@
               >[]</v-btn
             >
           </div>
-        </div>
+        </div> -->
       </div>
-      <v-container fluid>
-        <v-row align="center">
-          <v-col class="d-flex" cols="12" sm="6" md="4">
-            <v-select
-              :items="items"
-              label="Select Prefixes, Suffixes etc"
-              outlined
-              v-model="selectOption"
-            ></v-select>
-          </v-col>
-          <v-col class="d-flex" cols="12" sm="6" md="4">
-            <v-select
-              :items="fields"
-              label="Select Fields"
-              outlined
-              v-model="selectField"
-              v-show="selectOption"
-            ></v-select>
-          </v-col>
-          <v-col class="d-flex" cols="12" sm="6" md="4">
-            <v-btn
-              class="mb-8"
-              color="primary"
-              @click="add"
-              v-show="selectOption && selectField"
-              rounded
-              >Add</v-btn
-            >
-          </v-col>
-        </v-row>
-      </v-container>
     </div>
     <h2 class="text-center mt-5 combination-text" v-if="combine.length">
       {{ combine.length }} combinations possible
@@ -266,7 +266,7 @@ export default {
       secondText: '',
       thirdText: '',
       combineText: '',
-      separate: ' ',
+      separate: '',
       wrapStart: '',
       wrapEnd: '',
       isActive: 'Space',
@@ -615,4 +615,3 @@ export default {
   },
 }
 </script>
-

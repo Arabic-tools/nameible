@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar  fixed app>
+    <v-app-bar dark fixed app>
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
@@ -27,7 +27,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
+      title: 'Nameible',
     }
   },
 }
