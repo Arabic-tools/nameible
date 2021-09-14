@@ -4,45 +4,29 @@
       <div class="banner-section">
         <div class="right-section">
           <div class="mb-4 display-block">
-            <h1 class="heading">Nameible.com</h1>
+            <h2 style="color: #ff6437" class="heading">Nameible.com</h2>
           </div>
           <div class="mb-4 display-block">
             <div class="mb-2 display-block">
-              <p class="description">Merge and combine words fast and easy.</p>
-            </div>
-            <div class="mb-2 display-block">
               <p class="description">
-                Use it for naming, domaining, Google Ads, PPC etc.
-              </p>
-            </div>
-            <div class="mb-2 display-block">
-              <p class="description">
-                Or use it as a business & brand name generator.
+                Nameible helps you to generate cathcy names for your business,
+                startup, or any side project you work on. Nameible helps you to
+                generate brand ideas by any of the following:
               </p>
             </div>
           </div>
           <div class="mb-2 display-block">
-            <p class="sub-description">
-              Type your keywords in the 3 boxes and press
-              <a class="sub-description link" tabindex="0" @click="mergeText"
-                >Merge!</a
+            <p
+              v-for="(example, index) in examples"
+              :key="index"
+              class="sub-description"
+            >
+              {{ example }}
+              <a class="sub-description link" @click="makeExample(index + 1)">
+                example here.</a
               >
             </p>
           </div>
-          <p class="sub-description">
-            Or load some sample data (<a
-              class="sub-description link"
-              @click="Domain"
-              tabindex="0"
-              >Domaining</a
-            >,
-            <a class="sub-description link" @click="link" tabindex="0"
-              >Linkbuilding</a
-            >,
-            <a class="sub-description link" @click="adwords" tabindex="0"
-              >Adwords</a
-            >)
-          </p>
         </div>
       </div>
     </div>
@@ -255,7 +239,13 @@
   </div>
 </template>
 <script>
-import { domainSuffix, domainPrefix, suffix } from './data.json'
+import {
+  domainSuffix,
+  domainPrefix,
+  suffix,
+  prefix,
+  letters,
+} from './data.json'
 
 export default {
   data() {
@@ -296,87 +286,18 @@ export default {
         { text: 'Second Text Field', value: 'secondText' },
         { text: 'Third Text Field', value: 'thirdText' },
       ],
-
       suffix,
-
-      prefix: [
-        'a-',
-        'an-',
-        'ante-',
-        'anti-',
-        'auto-',
-        'circum-',
-        'co-',
-        'com-',
-        'con-',
-        'contra-',
-        'contro-',
-        'de-',
-        'dis-',
-        'en-',
-        'ex-',
-        'extra-',
-        'hetero-',
-        'homo-',
-        'homeo-',
-        'hyper-',
-        'il-',
-        'im-',
-        'in-',
-        'ir-',
-        'inter-',
-        'intra-',
-        'intro-',
-        'macro-',
-        'micro-',
-        'mono-',
-        'non-',
-        'omni-',
-        'post-',
-        'pre-',
-        'pro-',
-        'sub-',
-        'sym-',
-        'syn-',
-        'tele-',
-        'trans-',
-        'tri-',
-        'un-',
-        'uni-',
-        'up',
-      ],
-
+      prefix,
       domainPrefix,
-
+      letters,
       domainSuffix,
-
-      letters: [
-        'A',
-        'B',
-        'C',
-        'D',
-        'E',
-        'F',
-        'G',
-        'H',
-        'I',
-        'J',
-        'K',
-        'L',
-        'M',
-        'N',
-        'O',
-        'P',
-        'Q',
-        'R',
-        'S',
-        'T',
-        'U',
-        'V',
-        'W',
-        'X',
-        'Y',
-        'Z',
+      examples: [
+        '1- bulk add all English prefixes to your prefered word or term,',
+        '2- bulk add all English Suffixes to your prefered word or term,',
+        '3- bulk add all popular domain prefixes to your prefered word or term,',
+        '4- bulk add all popular domain suffixes to your prefered word or term,',
+        '5- Replace a letter of your preferred word/term with another letter. Consider this play on the word "Coffeeshop",',
+        '6- Merge and combine your preferred words/terms together, and check their domain availability,',
       ],
     }
   },
@@ -453,6 +374,27 @@ export default {
         //  gtag('config', 'AW-1006620676');
         //  gtag('event', 'conversion', {'send_to': 'AW-1006620676/2s0cCPLN-90CEISg_98D'});
       }, 120000)
+    },
+    makeExample(example) {
+      if (example === 1) {
+        // english prefixes
+        this.secondText = "testName\n" + "testName2\n"
+        this.firstText = this.prefix.join('\n')
+      } else if (example === 2) {
+        // english suffixes
+        this.firstText = "testName\n" + "testName2\n"
+        this.secondText = this.suffix.join('\n')
+      } else if (example === 3) {
+        // domain prefixes
+        this.secondText = "testName\n" + "testName2\n"
+        this.firstText = this.domainPrefix.join('\n')
+        this.thirdText = '.com\n' + '.net\n' + '.org'
+      } else if (example === 4) {
+        // domain suffixes
+        this.firstText = "testName\n" + "testName2\n"
+        this.secondText = this.domainSuffix.join('\n')
+        this.thirdText = '.com\n' + '.net\n' + '.org'
+      }
     },
     mergeText() {
       const arr = []

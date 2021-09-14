@@ -1,7 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar dark fixed app>
-      <v-toolbar-title v-text="title" />
+    <v-app-bar  fixed app>
+      <h1 style="color:#FF6437">{{title}}</h1>
+      
       <v-spacer />
     </v-app-bar>
     <v-main>
