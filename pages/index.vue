@@ -3,15 +3,14 @@
     <div class="mt-3">
       <div class="banner-section">
         <div class="right-section">
-          <div class="mb-4 display-block">
+          <!-- <div class="mb-4 display-block">
             <h2 style="color: #ff6437" class="heading">Nameible.com</h2>
-          </div>
+          </div> -->
           <div class="mb-4 display-block">
             <div class="mb-2 display-block">
               <p class="description">
                 Nameible helps you to generate cathcy names for your business,
-                startup, or any side project you work on. Nameible helps you to
-                generate brand ideas by any of the following:
+                startup, or any side project you work on using the following methods:
               </p>
             </div>
           </div>
@@ -35,7 +34,7 @@
       <v-row>
         <v-col cols="12" sm="4">
           <v-textarea
-            label="Enter some words here"
+            label="Enter some words here (optional)"
             outlined
             rows="4"
             row-height="50"
@@ -45,7 +44,7 @@
         </v-col>
         <v-col cols="12" sm="4">
           <v-textarea
-            label="Enter some words here"
+            label="Enter some words here (optional)"
             height="210"
             outlined
             rows="4"
@@ -55,7 +54,7 @@
         </v-col>
         <v-col cols="12" sm="4">
           <v-textarea
-            label="Enter some words here"
+            label="Enter some words here (optional)"
             outlined
             rows="4"
             row-height="50"
@@ -76,7 +75,9 @@
     <div>
       <div class="featured-section mt-3">
         <v-container fluid>
-          <v-row align="center">
+                
+          <v-row align="center"  >
+            Add a list of : 
             <v-col class="d-flex" cols="12" sm="6" md="4">
               <v-select
                 :items="items"
@@ -85,7 +86,7 @@
                 v-model="selectOption"
               ></v-select>
             </v-col>
-            <v-col class="d-flex" cols="12" sm="6" md="4">
+            <v-col class="d-flex" cols="12" sm="6" md="3">
               <v-select
                 :items="fields"
                 label="Select Fields"
@@ -94,7 +95,7 @@
                 v-show="selectOption"
               ></v-select>
             </v-col>
-            <v-col class="d-flex" cols="12" sm="6" md="4">
+            <v-col class="d-flex" cols="12" sm="6" md="3">
               <v-btn
                 class="mb-8"
                 color="primary"
@@ -174,43 +175,7 @@
             ></v-text-field
           ></v-btn>
         </div>
-        <!-- <div class="">
-          <div class="">
-            <span class="featured-title">Wrap in:</span>
-            <v-btn
-              @click="
-                wrapStart = ''
-                wrapEnd = ''
-                activeWrap = 'Nothing'
-              "
-              color="#dfe3e9"
-              depressed
-              :class="[activeWrap === 'Nothing' ? 'active' : '']"
-              >Nothing</v-btn
-            >
-            <v-btn
-              @click="
-                wrapping()
-                activeWrap = ''
-              "
-              color="#dfe3e9"
-              depressed
-              :class="[activeWrap === '' ? 'active' : '']"
-              >" "</v-btn
-            >
-            <v-btn
-              @click="
-                wrapStart = '['
-                wrapEnd = ']'
-                activeWrap = '[]'
-              "
-              color="#dfe3e9"
-              depressed
-              :class="[activeWrap === '[]' ? 'active' : '']"
-              >[]</v-btn
-            >
-          </div>
-        </div> -->
+
       </div>
     </div>
     <h2 class="text-center mt-5 combination-text" v-if="combine.length">
@@ -395,8 +360,25 @@ export default {
         this.secondText = this.domainSuffix.join('\n')
         this.thirdText = '.com\n' + '.net\n' + '.org'
       }
+      else if (example === 5) { 
+                this.firstText = "coffee" 
+                this.secondText = this.letters.join('\n')
+        this.thirdText = "op\n"
+      }
+
+      else if (example === 6) {
+                this.firstText = "Red\n" + "Blue\n"  + "Yellow\n" 
+        this.secondText = "CoffeeShop\n" + "coffee\n"
+     
+      }
+      setTimeout( () => {
+         this.mergeText()
+      } , 500)
+     
     },
+
     mergeText() {
+      console.log("hellow from merge")
       const arr = []
       this.combine.forEach((data) => {
         const newArray = data.split(',')
@@ -557,3 +539,4 @@ export default {
   },
 }
 </script>
+

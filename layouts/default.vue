@@ -12,7 +12,22 @@
     </v-main>
 
     <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+
+      <v-row>
+        <v-col style="text-align:center">
+                              <!-- الموقع برعاية :
+
+          <a href="https://wasetshera.com?myad=53196"> وسيط شراء من الإنترنت</a>
+          <br /> -->
+         contact us :
+          <a href="mailto:nameible@inboxeen.com">nameible@inboxeen.com</a>
+
+          <br />
+              © 2021 Nameible. All rights reserved.
+        </v-col>
+      </v-row>
+  
+      <!-- <span>&copy; {{ new Date().getFullYear() }}</span> -->
     </v-footer>
   </v-app>
 </template>

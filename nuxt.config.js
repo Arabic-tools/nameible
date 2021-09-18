@@ -39,6 +39,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+   
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,6 +48,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+   
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -82,6 +84,7 @@ export default {
       }
     }
   },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
