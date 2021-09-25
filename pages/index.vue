@@ -9,7 +9,7 @@
           <div class="mb-4 display-block">
             <div class="mb-2 display-block">
               <p class="description">
-                Nameible helps you to generate cathcy names for your business,
+                Nameible helps you generate catchy names for your business,
                 startup, or any side project you work on using the following methods:
               </p>
             </div>
@@ -21,9 +21,9 @@
               class="sub-description"
             >
               {{ example }}
-              <a class="sub-description link" @click="makeExample(index + 1)">
-                example here.</a
-              >
+              (<a class="sub-description link" @click="makeExample(index + 1)">
+              Example here</a
+              >)
             </p>
           </div>
         </div>
@@ -257,12 +257,12 @@ export default {
       letters,
       domainSuffix,
       examples: [
-        '1- bulk add all English prefixes to your prefered word or term,',
-        '2- bulk add all English Suffixes to your prefered word or term,',
-        '3- bulk add all popular domain prefixes to your prefered word or term,',
-        '4- bulk add all popular domain suffixes to your prefered word or term,',
-        '5- Replace a letter of your preferred word/term with another letter. Consider this play on the word "Coffeeshop",',
-        '6- Merge and combine your preferred words/terms together, and check their domain availability,',
+        '1- Add all English prefixes to your prefered word or term. ',
+        '2- Add all English suffixes to your prefered word or term. ',
+        '3- Add all popular domain prefixes to your prefered word or term. ',
+        '4- Add all popular domain suffixes to your prefered word or term. ',
+        '5- Replace a letter of your preferred word/term with another letter. Consider this play on the word "Coffeeshop". ',
+        '6- Merge your preferred words/terms together, and check their domain availability. ',
       ],
     }
   },
@@ -343,20 +343,20 @@ export default {
     makeExample(example) {
       if (example === 1) {
         // english prefixes
-        this.secondText = "testName\n" + "testName2\n"
+        this.secondText = "TestName1\n" + "TestName2\n"
         this.firstText = this.prefix.join('\n')
       } else if (example === 2) {
         // english suffixes
-        this.firstText = "testName\n" + "testName2\n"
+        this.firstText = "TestName1\n" + "TestName2\n"
         this.secondText = this.suffix.join('\n')
       } else if (example === 3) {
         // domain prefixes
-        this.secondText = "testName\n" + "testName2\n"
+        this.secondText = "TestName1\n" + "TestName2\n"
         this.firstText = this.domainPrefix.join('\n')
         this.thirdText = '.com\n' + '.net\n' + '.org'
       } else if (example === 4) {
         // domain suffixes
-        this.firstText = "testName\n" + "testName2\n"
+        this.firstText = "TestName1\n" + "TestName2\n"
         this.secondText = this.domainSuffix.join('\n')
         this.thirdText = '.com\n' + '.net\n' + '.org'
       }
