@@ -3,8 +3,8 @@
 ## Build Setup
 
 ```bash
-
 #note: Add the google analytics manually below on index.html file just above the head tag:
+(After npm run generate)
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208155997-22"></script>
@@ -15,7 +15,6 @@
 
   gtag('config', 'UA-208155997-22');
 </script>
-
 
 
 
@@ -31,6 +30,8 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
