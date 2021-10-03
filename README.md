@@ -3,7 +3,7 @@
 ## Build Setup
 
 ```bash
-#note: Add the google analytics manually below on index.html file just above the head tag:
+#note: Add the google analytics manually below on index.html file just above the </head> tag:
 (After npm run generate)
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
