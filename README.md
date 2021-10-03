@@ -3,6 +3,22 @@
 ## Build Setup
 
 ```bash
+
+#note: Add the google analytics manually below on index.html file just above the head tag:
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208155997-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-208155997-22');
+</script>
+
+
+
+
 # install dependencies
 $ npm install
 
