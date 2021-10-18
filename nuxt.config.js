@@ -47,6 +47,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics'
    
   ],
 
@@ -58,6 +59,9 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+  googleAnalytics: {
+    id: 'UA-208155997-22'
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
