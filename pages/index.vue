@@ -10,7 +10,8 @@
             <div class="mb-2 display-block">
               <p class="description">
                 Nameible helps you generate catchy names for your business,
-                startup, or any side project you work on using the following methods:
+                startup, or any side project you work on using the following
+                methods:
               </p>
             </div>
           </div>
@@ -22,7 +23,7 @@
             >
               {{ example }}
               (<a class="sub-description link" @click="makeExample(index + 1)">
-              Example here</a
+                Example here</a
               >)
             </p>
           </div>
@@ -75,9 +76,8 @@
     <div>
       <div class="featured-section mt-3">
         <v-container fluid>
-                
-          <v-row align="center"  >
-            Add a list of : 
+          <v-row align="center">
+            Add a list of :
             <v-col class="d-flex" cols="12" sm="6" md="4">
               <v-select
                 :items="items"
@@ -175,7 +175,6 @@
             ></v-text-field
           ></v-btn>
         </div>
-
       </div>
     </div>
     <h2 class="text-center mt-5 combination-text" v-if="combine.length">
@@ -269,12 +268,15 @@ export default {
   watch: {
     firstText() {
       this.firstTextArr = this.firstText.split('\n')
+      this.firstTextArr = this.firstTextArr.map((val) => val.replace(' ', ''))
     },
     secondText() {
       this.secondTextArr = this.secondText.split('\n')
+      this.secondTextArr = this.secondTextArr.map((val) => val.replace(' ', ''))
     },
     thirdText() {
       this.thirdTextArr = this.thirdText.split('\n')
+      this.thirdTextArr = this.thirdTextArr.map((val) => val.replace(' ', ''))
     },
   },
   computed: {
@@ -343,42 +345,36 @@ export default {
     makeExample(example) {
       if (example === 1) {
         // english prefixes
-        this.secondText = "TestName1\n" + "TestName2\n"
+        this.secondText = 'TestName1\n' + 'TestName2\n'
         this.firstText = this.prefix.join('\n')
       } else if (example === 2) {
         // english suffixes
-        this.firstText = "TestName1\n" + "TestName2\n"
+        this.firstText = 'TestName1\n' + 'TestName2\n'
         this.secondText = this.suffix.join('\n')
       } else if (example === 3) {
         // domain prefixes
-        this.secondText = "TestName1\n" + "TestName2\n"
+        this.secondText = 'TestName1\n' + 'TestName2\n'
         this.firstText = this.domainPrefix.join('\n')
         this.thirdText = '.com\n' + '.net\n' + '.org'
       } else if (example === 4) {
         // domain suffixes
-        this.firstText = "TestName1\n" + "TestName2\n"
+        this.firstText = 'TestName1\n' + 'TestName2\n'
         this.secondText = this.domainSuffix.join('\n')
         this.thirdText = '.com\n' + '.net\n' + '.org'
+      } else if (example === 5) {
+        this.firstText = 'coffee'
+        this.secondText = this.letters.join('\n')
+        this.thirdText = 'op\n'
+      } else if (example === 6) {
+        this.firstText = 'Red\n' + 'Blue\n' + 'Yellow\n'
+        this.secondText = 'CoffeeShop\n' + 'coffee\n'
       }
-      else if (example === 5) { 
-                this.firstText = "coffee" 
-                this.secondText = this.letters.join('\n')
-        this.thirdText = "op\n"
-      }
-
-      else if (example === 6) {
-                this.firstText = "Red\n" + "Blue\n"  + "Yellow\n" 
-        this.secondText = "CoffeeShop\n" + "coffee\n"
-     
-      }
-      setTimeout( () => {
-         this.mergeText()
-      } , 500)
-     
+      setTimeout(() => {
+        this.mergeText()
+      }, 500)
     },
 
     mergeText() {
-      console.log("hellow from merge")
       const arr = []
       this.combine.forEach((data) => {
         const newArray = data.split(',')
@@ -534,9 +530,8 @@ export default {
       document.execCommand('copy')
       //  this.combineText = ''
       if (key === true)
-        window.open('https:// www.godaddy.com/domains/bulk-domain-search')
+        window.open('https://www.godaddy.com/domains/bulk-domain-search')
     },
   },
 }
 </script>
-

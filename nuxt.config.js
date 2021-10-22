@@ -63,7 +63,9 @@ export default {
   googleAnalytics: {
     id: 'UA-208155997-22'
   },
-
+  googleAnalytics: {
+    id: 'UA-208155997-24'
+  },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
