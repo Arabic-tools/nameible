@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - nameible',
-    title: 'Nameible | Business Name Generator (2021) | brand & company name generator ',
+    title: 'Nameible | Business Name Generator (2022) | brand & company name generator ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -47,7 +47,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
    
   ],
 
@@ -60,12 +59,7 @@ export default {
       lang: 'en'
     }
   },
-  googleAnalytics: {
-    id: 'UA-208155997-22'
-  },
-  googleAnalytics: {
-    id: 'UA-208155997-24'
-  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
