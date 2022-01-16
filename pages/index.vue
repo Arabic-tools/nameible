@@ -70,7 +70,7 @@
         + Extra Options
       </p> -->
       <v-btn class="ml-5" color="primary" rounded @click="reset"
-        >Reset Field</v-btn
+        >Reset Fields</v-btn
       >
     </div>
     <div>
@@ -178,13 +178,13 @@
       </div>
     </div>
     <h2 class="text-center mt-5 combination-text" v-if="combine.length">
-      {{ combine.length }} combinations possible
+      {{ combine.length }} possible combinations
     </h2>
     <h2 class="text-center mt-5 combination-text" v-else>
-      0 combinations possible
+      0 possible combinations
     </h2>
     <div class="text-center">
-      <v-btn class="mt-5 mb-5" color="primary" @click="mergeText">Merge</v-btn>
+      <v-btn class="mt-5 mb-5" color="primary" @click="mergeText">Generate Names</v-btn>
     </div>
     <v-textarea
       outlined
@@ -200,7 +200,10 @@
         >Copy & Open GoDaddy</v-btn
       >
     </div>
-  </div>
+<div class="product-hunt">
+<a href="https://www.producthunt.com/posts/nameible?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-nameible" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=326715&theme=light&period=daily" alt="Nameible - Business name generator | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>	
+	</div>
+	</div>
 </template>
 <script>
 import {
@@ -535,3 +538,11 @@ export default {
   },
 }
 </script>
+<style>
+.product-hunt{
+padding-top: 30px;
+margin: 0 auto;
+padding-bottom: 30px;
+text-align: center;
+}
+</style>
