@@ -197,7 +197,7 @@
     <div class="featured-section">
       <v-btn color="primary" @click="copy(false)">Copy All</v-btn>
       <v-btn color="primary" class="ml-5" @click="copy(true)"
-        >Copy $ Open GoDaddy</v-btn
+        >Copy & Open GoDaddy</v-btn
       >
     </div>
   </div>
