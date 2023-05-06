@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - nameible',
-    title: 'Nameible | Business Name Generator (2022) | brand & company name generator ',
+    title: 'Nameible | Business Name Generator (2023) | brand & company name generator ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
