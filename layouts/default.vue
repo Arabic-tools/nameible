@@ -23,7 +23,7 @@
           <a href="mailto:nameible@inboxeen.com">nameible@inboxeen.com</a>
 
           <br />
-              © 2022 Nameible. All rights reserved.
+              © 2023 Nameible. All rights reserved.
         </v-col>
       </v-row>
   
